@@ -1,42 +1,178 @@
 body {
-.minimal-layout {
-    max-width: 900px;
+.member-page {
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 15px;
 }
 
-.minimal-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.minimal-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    object-fit: cover;
-    border: 5px solid white;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-.minimal-stats {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 25px 0;
-}
-
-.stat-item {
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff69b4;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.stat-number {
-    font-size: 1.5em;
+.back-button:hover {
+    background: #e55a9d;
+}
+
+/* Основная сетка страницы участницы */
+.member-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Блок с фото */
+.member-photo-box {
+    grid-column: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.member-photo {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #ff69b4;
+}
+
+/* ОСНОВНАЯ ИНФОРМАЦИЯ - РОЗОВАЯ КАРТОЧКА */
+.member-info-card {
+    grid-column: 2;
+    background: #ff69b4; /* Розовый фон */
+    color: white; /* Белый текст */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.member-name {
+    color: white; /* Белый вместо розового */
+    font-size: 24px;
+    margin-bottom: 5px;
     font-weight: bold;
-    color: #e91e63;
 }
 
-.stat-label {
-    font-size: 0.9em;
-    color: #666;
+.member-korean-name {
+    color: #ffe6f2; /* Светло-розовый */
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Детали участницы в розовой карточке */
+.member-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.detail-item {
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый */
+    border-radius: 6px;
+    border-left: 3px solid white; /* Белая граница */
+}
+
+.detail-label {
+    font-weight: bold;
+    color: #ffe6f2; /* Светло-розовый */
+    font-size: 12px;
+}
+
+.detail-value {
+    color: white; /* Белый текст */
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.member-bio {
+    font-size: 14px;
+    line-height: 1.4;
+    color: white; /* Белый текст */
+}
+
+.member-bio .highlight {
+    background: rgba(255, 255, 255, 0.3); /* Подсветка на розовом */
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* Остальные карточки (белые) */
+.member-highlights {
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.highlight-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.highlight-card h3 {
+    color: #ff69b4;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ff69b4;
+    padding-bottom: 5px;
+}
+
+/* Факты и теги */
+.fun-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.fact-tag {
+    background: #ff69b4;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 11px;
+}
+
+/* Карточка личной жизни (белая) */
+.member-life-card {
+    grid-column: 1 / span 2;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .member-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .member-photo-box,
+    .member-info-card,
+    .member-highlights,
+    .member-life-card {
+        grid-column: 1;
+    }
+    
+    .member-highlights {
+        grid-template-columns: 1fr;
+    }
 }
