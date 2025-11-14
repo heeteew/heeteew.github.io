@@ -1,4 +1,133 @@
 body {
+    font-family: Arial;
+    background: #f8f8f8;
+    padding: 15px;
+    margin: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main-title {
+    color: #ff69b4;
+    font-size: 32px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.compact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.photo-box {
+    grid-column: 1;
+}
+
+.info-card {
+    grid-column: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.history-card {
+    grid-column: 1 / span 2;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.members-card {
+    grid-column: 1 / span 2;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.group-photo {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #ff69b4;
+}
+
+.member-link {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    background: #ff69b4;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.member-link:hover {
+    background: #e55a9d;
+}
+
+.year {
+    color: #ff69b4;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 15px 0 8px 0;
+    border-bottom: 1px solid #ff69b4;
+    padding-bottom: 3px;
+}
+
+.highlight {
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 0;
+    color: #333;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 8px 0;
+}
+
+ul {
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
+li {
+    font-size: 13px;
+    margin: 3px 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .compact-grid {
+        grid-template-columns: 1fr;
+    }
+    .photo-box, .info-card, .history-card, .members-card {
+        grid-column: 1;
+    }
+}
+
+/* ===== СТИЛИ ДЛЯ СТРАНИЦ УЧАСТНИЦ ===== */
 .member-page {
     max-width: 1000px;
     margin: 0 auto;
@@ -21,7 +150,6 @@ body {
     background: #e55a9d;
 }
 
-/* Основная сетка страницы участницы */
 .member-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -29,7 +157,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Блок с фото */
 .member-photo-box {
     grid-column: 1;
     background: white;
@@ -45,31 +172,29 @@ body {
     border: 3px solid #ff69b4;
 }
 
-/* ОСНОВНАЯ ИНФОРМАЦИЯ - РОЗОВАЯ КАРТОЧКА */
 .member-info-card {
     grid-column: 2;
-    background: #ff69b4; /* Розовый фон */
-    color: white; /* Белый текст */
+    background: #ff69b4;
+    color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .member-name {
-    color: white; /* Белый вместо розового */
+    color: white;
     font-size: 24px;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
 .member-korean-name {
-    color: #ffe6f2; /* Светло-розовый */
+    color: #ffe6f2;
     font-size: 14px;
     margin-bottom: 15px;
     font-style: italic;
 }
 
-/* Детали участницы в розовой карточке */
 .member-details {
     display: grid;
     grid-template-columns: 1fr;
@@ -79,19 +204,19 @@ body {
 
 .detail-item {
     padding: 8px 12px;
-    background: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый */
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 6px;
-    border-left: 3px solid white; /* Белая граница */
+    border-left: 3px solid white;
 }
 
 .detail-label {
     font-weight: bold;
-    color: #ffe6f2; /* Светло-розовый */
+    color: #ffe6f2;
     font-size: 12px;
 }
 
 .detail-value {
-    color: white; /* Белый текст */
+    color: white;
     font-size: 13px;
     margin-top: 3px;
 }
@@ -99,16 +224,15 @@ body {
 .member-bio {
     font-size: 14px;
     line-height: 1.4;
-    color: white; /* Белый текст */
+    color: white;
 }
 
 .member-bio .highlight {
-    background: rgba(255, 255, 255, 0.3); /* Подсветка на розовом */
+    background: rgba(255, 255, 255, 0.3);
     padding: 2px 4px;
     border-radius: 3px;
 }
 
-/* Остальные карточки (белые) */
 .member-highlights {
     grid-column: 1 / span 2;
     display: grid;
@@ -133,7 +257,6 @@ body {
     padding-bottom: 5px;
 }
 
-/* Факты и теги */
 .fun-facts {
     display: flex;
     flex-wrap: wrap;
@@ -149,7 +272,6 @@ body {
     font-size: 11px;
 }
 
-/* Карточка личной жизни (белая) */
 .member-life-card {
     grid-column: 1 / span 2;
     background: white;
@@ -159,7 +281,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
     .member-grid {
         grid-template-columns: 1fr;
