@@ -126,3 +126,31 @@ body {
                 grid-column: 1;
             }
         }
+
+         .video-card {
+                background: white;
+                padding: 25px;
+                border-radius: 10px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                margin-top: 20px;
+                text-align: center;
+}
+
+         .video-card h2 {
+                color: #ff69b4;
+                margin-bottom: 20px;
+                font-size: 22px;
+}
+
+          .main-video {
+                margin: 0 auto;
+                max-width: 800px;
+}
+
+         .main-video video {
+                width: 100%;
+                border-radius: 10px;
+                border: 3px solid #ff69b4;
+                background: #000;
+}
+
